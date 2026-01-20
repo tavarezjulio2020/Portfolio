@@ -308,18 +308,28 @@ footer {
         flex-direction: column-reverse; /* Puts image on top, text on bottom */
         text-align: center;
         justify-content: center;
-        padding-top: 100px; /* Pushes everything down so it doesn't hide behind the header */
+        padding-top: 100px;
     }
     
     .hero-image-container img {
-        width: 60%; /* Shrinks the image to 60% of the screen width */
-        max-width: 250px; /* Prevents it from getting too big */
+        width: 60%; 
+        max-width: 250px; 
         height: auto;
-        margin-bottom: 50px; /* IMPORTANT: Adds space below the image so the text doesn't touch the shadow */
+        /* CRITICAL FIX: Pushes the text down 60px to clear the purple shadow */
+        margin-bottom: 60px; 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     
+    /* Shrink the text slightly so "Julio Tavarez" fits on one line */
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+    
+    .hero-content p {
+        padding: 0 15px; /* Adds breathing room for the paragraph text */
     }
 
     .header-controls {
