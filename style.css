@@ -298,15 +298,25 @@ footer {
 }
 
 /* RESPONSIVE */
+/* RESPONSIVE (MOBILE) */
 @media (max-width: 768px) {
     .nav-menu {
-        display: none; /* Add JS to toggle this later if needed */
+        display: none; 
     }
     
     .hero-section {
-        flex-direction: column-reverse;
+        flex-direction: column-reverse; /* Puts image on top, text on bottom */
         text-align: center;
-        padding-top: 40px;
+        padding-top: 120px; /* Increased to stop the Header from covering the image */
+        justify-content: center;
+        gap: 40px; /* Adds space between the Image and the Text */
+    }
+    
+    .hero-image-container img {
+        width: 80%; /* Makes image smaller on phones so it fits */
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 20px; /* Pushes the text down so they don't touch */
     }
     
     .hero-content h1 {
