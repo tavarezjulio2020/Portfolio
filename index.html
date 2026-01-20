@@ -3,118 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Professional Portfolio</title>
+    <title>Julio Cesar Tavarez | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <header class="main-header">
         <div class="logo">Julio Cesar Tavarez</div>
+        
         <nav class="nav-menu">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#awards">Awards / Certificats</a></li>
+                <li><a href="#home" data-lang-en="Home" data-lang-es="Inicio">Home</a></li>
+                <li><a href="#about" data-lang-en="About" data-lang-es="Sobre Mí">About</a></li>
+                <li><a href="#portfolio" data-lang-en="Portfolio" data-lang-es="Portafolio">Portfolio</a></li>
+                <li><a href="#awards" data-lang-en="Awards" data-lang-es="Premios">Awards</a></li>
             </ul>
         </nav>
-        <a href="#contact" class="cta-button">Contact Me</a>
+
+        <div class="header-controls">
+            <button id="lang-toggle" class="icon-btn" aria-label="Toggle Language">
+                <span class="lang-text">ES</span>
+            </button>
+            
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                <i class="fas fa-sun"></i>
+            </button>
+
+            <a href="#contact" class="cta-button" data-lang-en="Contact Me" data-lang-es="Contáctame">Contact Me</a>
+        </div>
+        
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
 
     <main>
         <section id="home" class="hero-section">
             <div class="hero-content">
-                <h1>Hello! I'm Julio Tavarez</h1>
-                <p>I am a highly motivated web developer and designer, specialized in crafting attractive digital experiences for the modern web.</p>
+                <h1 data-lang-en="Hello! I'm Julio Tavarez" data-lang-es="¡Hola! Soy Julio Tavarez">Hello! I'm Julio Tavarez</h1>
+                <p data-lang-en="I am a highly motivated web developer and designer, specialized in crafting attractive digital experiences for the modern web." 
+                   data-lang-es="Soy un desarrollador web y diseñador altamente motivado, especializado en crear experiencias digitales atractivas para la web moderna.">
+                   I am a highly motivated web developer and designer, specialized in crafting attractive digital experiences for the modern web.
+                </p>
                 <div class="hero-actions">
-                    <a href="mailto:tavarez.julio2020@gmail.com" class="btn primary-btn">Email Me</a>
-                    <a href="Julio_Resume.pdf" download class="btn secondary-btn">Download CV</a>
+                    <a href="mailto:tavarez.julio2020@gmail.com" class="btn primary-btn" data-lang-en="Email Me" data-lang-es="Envíame un Correo">Email Me</a>
+                    <a href="Julio_Resume.pdf" download class="btn secondary-btn" data-lang-en="Download CV" data-lang-es="Descargar CV">Download CV</a>
                 </div>
             </div>
-            <div class="hero-image">
+            <div class="hero-image-container">
+                <img src="https://via.placeholder.com/400" alt="Julio Tavarez" class="hero-img">
                 
-
-                [Image of You]
- 
             </div>
         </section>
 
-<section id="about" class="about-section">
-    <h2>Full Stack Developer & Designer — Building Modern, User-Focused Experiences - Focus on Databases</h2>
+        <section id="about" class="about-section">
+            <h2 data-lang-en="Full Stack Developer & Designer" data-lang-es="Desarrollador Full Stack y Diseñador">Full Stack Developer & Designer</h2>
+            <h3 class="subtitle" data-lang-en="Building Modern, User-Focused Experiences - Focus on Databases" data-lang-es="Creando Experiencias Modernas Centradas en el Usuario - Enfoque en Bases de Datos">Building Modern, User-Focused Experiences - Focus on Databases</h3>
 
-    <p class="about-text">
-        I began my software engineering journey in 2023 when I started school at BYU–Idaho. 
-        Since then, I've grown from writing my first lines of code to working professionally 
-        as a full-stack developer, UI/UX designer, and freelance engineer for multiple companies.
-    </p>
+            <p class="about-text" data-lang-en="I began my software engineering journey in 2023 when I started school at BYU–Idaho. Since then, I've grown from writing my first lines of code to working professionally as a full-stack developer, UI/UX designer, and freelance engineer for multiple companies." 
+               data-lang-es="Comencé mi viaje en ingeniería de software en 2023 en BYU–Idaho. Desde entonces, he pasado de escribir mis primeras líneas de código a trabajar profesionalmente como desarrollador full-stack, diseñador UI/UX e ingeniero freelance para múltiples empresas.">
+               I began my software engineering journey in 2023...
+            </p>
 
-    <div class="stats-grid">
-        <div class="stat-box">
-            <h3>2+ Years</h3>
-            <p>Professional Experience</p>
-        </div>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>2+ <span data-lang-en="Years" data-lang-es="Años">Years</span></h3>
+                    <p data-lang-en="Professional Experience" data-lang-es="Experiencia Profesional">Professional Experience</p>
+                </div>
+                <div class="service-box">Full Stack Developer (.NET, Node.js)</div>
+                <div class="service-box">UI/UX Designer</div>
+                <div class="service-box" data-lang-en="Freelance Web Developer" data-lang-es="Desarrollador Web Freelance">Freelance Web Developer</div>
+            </div>
 
-        <div class="service-box">Full Stack Developer (.NET, Node.js)</div>
-        <div class="service-box">UI/UX Designer</div>
-        <div class="service-box">Freelance Web Developer</div>
-    </div>
-
-    <div class="timeline">
-        <ul>
-            <li><strong>2025–Present:</strong> Full Stack Developer at Wilcox Fresh (C#, .NET, SQL, Python)</li>
-            <li><strong>Graduated with bachelors in software engineering @Brigham Young Uuniversity-Idaho</strong></li>
-            <li><strong>2025:</strong> Freelance projects — The Table & FirstShot Pest Control (HTML, CSS, Javascrypt)</li>
-            <li><strong>2024:</strong> First internship at 3io (PostgreSQL, PHP, Python)</li>
-            <li><strong>2023:</strong> Started Brigham Young Uuniversity-Idaho</li>
-
-        </ul>
-    </div>
-</section>
-
-        
-        <section id="portfolio" class="portfolio-section">
-            <h2>My Recent Projects</h2>
-            <div class="projects-grid">
+            <div class="timeline">
+                <h3 data-lang-en="My Journey" data-lang-es="Mi Trayectoria">My Journey</h3>
                 <ul>
                     <li>
-                        <div class="project-card">Gold Note - <a href="https://github.com/tavarezjulio2020/Gold-Note/tree/main/GoldNote"></a></div>
+                        <strong>2025–Present:</strong> 
+                        <span data-lang-en="Full Stack Developer at Wilcox Fresh (C#, .NET, SQL, Python)" data-lang-es="Desarrollador Full Stack en Wilcox Fresh (C#, .NET, SQL, Python)">Full Stack Developer at Wilcox Fresh</span>
                     </li>
                     <li>
-                        <div class="project-card">The Table Bakery/Cafe - <a href="https://thetable-bakery-and-cafe.github.io/TheTable/"></a></div>
+                        <strong>2025:</strong> 
+                        <span data-lang-en="Graduated with BS in Software Engineering @ BYU-Idaho" data-lang-es="Graduado con Licenciatura en Ingeniería de Software @ BYU-Idaho">Graduated with BS in Software Engineering</span>
                     </li>
                     <li>
-                        <div class="project-card">First Shot Pest Controle - <a href="https://thetable-bakery-and-cafe.github.io/TheTable/"></a></div>
+                        <strong>2025:</strong> 
+                        <span data-lang-en="Freelance projects — The Table & FirstShot Pest Control" data-lang-es="Proyectos Freelance — The Table & FirstShot Pest Control">Freelance projects</span>
+                    </li>
+                    <li>
+                        <strong>2024:</strong> 
+                        <span data-lang-en="First internship at 3io (PostgreSQL, PHP, Python)" data-lang-es="Primera pasantía en 3io (PostgreSQL, PHP, Python)">First internship at 3io</span>
                     </li>
                 </ul>
+            </div>
+        </section>
 
+        <section id="portfolio" class="portfolio-section">
+            <h2 data-lang-en="My Recent Projects" data-lang-es="Mis Proyectos Recientes">My Recent Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Gold Note</h3>
+                        <p data-lang-en="A comprehensive application focused on..." data-lang-es="Una aplicación integral enfocada en...">Project description placeholder.</p>
+                        <a href="https://github.com/tavarezjulio2020/Gold-Note/tree/main/GoldNote" target="_blank" class="project-link">GitHub <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>The Table Bakery/Cafe</h3>
+                        <p data-lang-en="Website for a local bakery..." data-lang-es="Sitio web para una panadería local...">Project description placeholder.</p>
+                        <a href="https://thetable-bakery-and-cafe.github.io/TheTable/" target="_blank" class="project-link">Live Demo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>First Shot Pest Control</h3>
+                        <p data-lang-en="Business site for pest control services..." data-lang-es="Sitio de negocios para servicios de control de plagas...">Project description placeholder.</p>
+                        <a href="#" target="_blank" class="project-link">Live Demo <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="awards" class="awards-section">
-            <h2>Certificates & Achievements</h2>
-            <ul class="awards-list">
-                <a href="BYU_Idaho_Diploma.jpg">
-                    <li>Bachelor of Science in Software Engineer</li>
+            <h2 data-lang-en="Certificates & Achievements" data-lang-es="Certificados y Logros">Certificates & Achievements</h2>
+            <div class="awards-grid">
+                <a href="BYU_Idaho_Diploma.jpg" class="award-card">
+                    <i class="fas fa-graduation-cap award-icon"></i>
+                    <div class="award-info">
+                        <h4 data-lang-en="BS Software Engineering" data-lang-es="Licenciatura en Ingeniería de Software">BS Software Engineering</h4>
+                        <span class="award-date">BYU-Idaho</span>
+                    </div>
                 </a>
-                <a href="https://courses.byui.edu/AcademicSupport/cc/certificates/CesarTavarez(S).pdf">
-                    <li>Career Success Silver Certified - Date issued: December 2025 </li>
+                <a href="https://courses.byui.edu/AcademicSupport/cc/certificates/CesarTavarez(S).pdf" class="award-card">
+                    <i class="fas fa-certificate award-icon"></i>
+                    <div class="award-info">
+                        <h4 data-lang-en="Career Success Silver" data-lang-es="Éxito Profesional Plata">Career Success Silver</h4>
+                        <span class="award-date">Dec 2025</span>
+                    </div>
                 </a>
-                <a href="https://www.credly.com/badges/746e7f9a-6f06-40f9-a4ee-b2c11847a976/linked_in_profile">
-                    <li>[PCEP-30-02] PCEP™ – Certified Entry-Level Python Programmer - Date issued: August 2024</li>
+                <a href="https://www.credly.com/badges/746e7f9a-6f06-40f9-a4ee-b2c11847a976/linked_in_profile" class="award-card">
+                    <i class="fab fa-python award-icon"></i>
+                    <div class="award-info">
+                        <h4>PCEP™ Python Entry-Level</h4>
+                        <span class="award-date">Aug 2024</span>
+                    </div>
                 </a>
-            </ul>
+            </div>
         </section>
-        
+
         <section id="contact" class="contact-section">
-            <h2>Get in Touch</h2>
-            <p>I'm currently available for freelance work and new opportunities. Drop me a line!</p>
-            <a href="mailto:tavarez.julio2020@gmail.com" class="btn primary-btn">Say Hello</a>
+            <h2 data-lang-en="Get in Touch" data-lang-es="Ponerse en Contacto">Get in Touch</h2>
+            <p data-lang-en="I'm currently available for freelance work and new opportunities. Drop me a line!" 
+               data-lang-es="Actualmente estoy disponible para trabajo freelance y nuevas oportunidades. ¡Escríbeme!">
+               I'm currently available for freelance work and new opportunities. Drop me a line!
+            </p>
+            <a href="mailto:tavarez.julio2020@gmail.com" class="btn primary-btn" data-lang-en="Say Hello" data-lang-es="Di Hola">Say Hello</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Julio Cesar Tavarez. All rights reserved.</p>
+        <p>&copy; 2025 Julio Cesar Tavarez. <span data-lang-en="All rights reserved." data-lang-es="Todos los derechos reservados.">All rights reserved.</span></p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
