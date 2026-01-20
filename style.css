@@ -307,16 +307,15 @@ footer {
     .hero-section {
         flex-direction: column-reverse; /* Puts image on top, text on bottom */
         text-align: center;
-        padding-top: 120px; /* Increased to stop the Header from covering the image */
         justify-content: center;
-        gap: 40px; /* Adds space between the Image and the Text */
+        padding-top: 100px; /* Pushes everything down so it doesn't hide behind the header */
     }
     
     .hero-image-container img {
-        width: 80%; /* Makes image smaller on phones so it fits */
-        max-width: 300px;
+        width: 60%; /* Shrinks the image to 60% of the screen width */
+        max-width: 250px; /* Prevents it from getting too big */
         height: auto;
-        margin-bottom: 20px; /* Pushes the text down so they don't touch */
+        margin-bottom: 50px; /* IMPORTANT: Adds space below the image so the text doesn't touch the shadow */
     }
     
     .hero-content h1 {
