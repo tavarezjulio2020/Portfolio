@@ -297,8 +297,6 @@ footer {
     color: var(--text-secondary);
 }
 
-/* RESPONSIVE */
-/* RESPONSIVE (MOBILE) */
 @media (max-width: 768px) {
     .nav-menu {
         display: none; 
