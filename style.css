@@ -309,12 +309,18 @@ footer {
         padding-top: 100px;
     }
     
+/* ADD THIS NEW RULE */
+    .hero-content {
+        position: relative;
+        z-index: 10; /* Forces text to sit ON TOP of the image shadow */
+    }
+
+    /* Update your existing image rule (Optional: increase margin slightly) */
     .hero-image-container img {
         width: 60%; 
-        max-width: 250px; 
+        max-width: 250px;
         height: auto;
-        /* CRITICAL FIX: Pushes the text down 60px to clear the purple shadow */
-        margin-bottom: 60px; 
+        margin-bottom: 80px; /* Bump this up to 80px just to be safe */
         display: block;
         margin-left: auto;
         margin-right: auto;
