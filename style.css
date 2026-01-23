@@ -315,21 +315,26 @@ footer {
         z-index: 10; /* Forces text to sit ON TOP of the image shadow */
     }
 
-    /* Update your existing image rule (Optional: increase margin slightly) */
-    .hero-image-container img {
-        width: 60%; 
-        max-width: 250px;
-        height: auto;
-        margin-bottom: 80px; /* Bump this up to 80px just to be safe */
+.hero-image-container img {
+        /* Make the image take up more screen width */
+        width: 85%; 
+        max-width: 380px; /* Allow it to get bigger than 250px */
+        
+        /* Reduce the gap slightly so it feels connected to the text */
+        margin-bottom: 40px; 
+        
+        /* Scale down the shadow slightly for mobile so it's not too chunky */
+        box-shadow: 12px 12px 0px var(--accent);
+        
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
     
-    /* Shrink the text slightly so "Julio Tavarez" fits on one line */
-    .hero-content h1 {
-        font-size: 2.2rem;
-        line-height: 1.2;
+.hero-content h1 {
+        /* Reduce text size slightly so "Julio Tavarez" fits on one line */
+        font-size: 2.8rem; 
+        line-height: 1.1;
     }
     
     .hero-content p {
