@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const resumeBtn = document.getElementById('resume-btn');
         if (resumeBtn) {
             // If lang is 'es', use SpanishResume.pdf, otherwise use Resume.pdf
-            resumeBtn.href = lang === 'es' ? 'SpanishResume.pdf' : 'Resume.pdf';
+           resumeBtn.href = lang === 'es' ? 'SpanishResume.pdf' : 'Englishresume.pdf';
         }
     }
 
