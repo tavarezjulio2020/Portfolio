@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentTheme = 'dark'; // Default
 
     // --- 1. LANGUAGE DETECTION ---
-    // Check browser language (e.g., "es-ES", "es", "en-US")
     const userLang = navigator.language || navigator.userLanguage; 
     if (userLang.startsWith('es')) {
         currentLang = 'es';
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Apply the detected language immediately
     updateLanguage(currentLang);
 
-
     // --- 2. LANGUAGE TOGGLE FUNCTIONALITY ---
     langToggleBtn.addEventListener('click', () => {
         // Toggle state
@@ -31,12 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateLanguage(lang) {
-        // Update Button Text (Show the option to switch TO)
+        // Update Button Text
         langTextSpan.textContent = lang === 'en' ? 'ES' : 'EN';
 
-        // Select all elements with data-lang attributes
+        // Update Text Content
         const elements = document.querySelectorAll('[data-lang-en]');
-
         elements.forEach(el => {
             if (lang === 'es') {
                 if(el.dataset.langEs) el.textContent = el.dataset.langEs;
@@ -44,20 +41,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 if(el.dataset.langEn) el.textContent = el.dataset.langEn;
             }
         });
-    }
 
+        // --- PDF SWITCH LOGIC ---
+        const resumeBtn = document.getElementById('resume-btn');
+        if (resumeBtn) {
+            // If lang is 'es', use SpanishResume.pdf, otherwise use Resume.pdf
+            resumeBtn.href = lang === 'es' ? 'SpanishResume.pdf' : 'Resume.pdf';
+        }
+    }
 
     // --- 3. THEME TOGGLE FUNCTIONALITY ---
     themeToggleBtn.addEventListener('click', () => {
         document.body.classList.toggle('light-mode');
         
-        // Check if class exists to determine current mode
         if (document.body.classList.contains('light-mode')) {
             themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon'); // Change icon to moon
+            themeIcon.classList.add('fa-moon'); 
         } else {
             themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun'); // Change icon to sun
+            themeIcon.classList.add('fa-sun'); 
         }
     });
 
