@@ -486,8 +486,8 @@ footer {
 
 /* Highlight the Custom card */
 .pricing-card.featured {
-    border-color: var(--accent);
-    border-top: 5px solid var(--accent);
+    border-top: 5px solid var(--accent); /* Only color the top */
+    /* REMOVED: border-color: var(--accent); <-- This was causing the "purple box" look */
 }
 
 .card-header {
