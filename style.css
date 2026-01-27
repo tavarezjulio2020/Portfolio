@@ -356,23 +356,28 @@ footer {
     }
 }
 
-/* --- Services Page Specific Styles --- */
+/* --- Services Page Specific Styles (Theme Aware) --- */
 
 .services-hero {
-    background-color: #f4f4f4; /* Light grey background */
+    background-color: var(--bg-secondary);
     text-align: center;
     padding: 80px 20px;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .services-hero h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #333;
+    color: var(--text-primary);
+}
+
+.services-hero p {
+    color: var(--text-secondary);
 }
 
 .pricing-section {
     padding: 60px 20px;
-    background-color: #fff;
+    background-color: var(--bg-primary);
 }
 
 .pricing-section .container {
@@ -380,55 +385,55 @@ footer {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    gap: 30px; /* Space between cards */
-    flex-wrap: wrap; /* Allows stacking on mobile */
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 /* Pricing Cards */
 .pricing-card {
-    background: white;
-    border: 1px solid #ddd;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 30px;
-    flex: 1; /* Both cards take equal width */
-    min-width: 300px; /* Prevents them from getting too skinny */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px;
+    box-shadow: var(--shadow);
     transition: transform 0.2s ease;
+    color: var(--text-primary);
 }
 
 .pricing-card:hover {
-    transform: translateY(-5px); /* Slight lift effect on hover */
-    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
 }
 
-/* Highlight the Custom card slightly differently */
+/* Highlight the Custom card */
 .pricing-card.featured {
-    border-color: #007bff; /* Blue border to stand out */
-    border-top: 5px solid #007bff;
+    border-color: var(--accent);
+    border-top: 5px solid var(--accent);
 }
 
 .card-header {
     text-align: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
 
 .card-header h3 {
     margin: 0;
-    color: #555;
+    color: var(--text-primary);
 }
 
 .price {
     font-size: 2rem;
     font-weight: bold;
-    color: #333;
+    color: var(--accent); /* Uses your theme accent color */
     margin: 10px 0;
 }
 
 .sub-text {
     font-size: 0.9rem;
-    color: #777;
+    color: var(--text-secondary);
 }
 
 .card-body ul {
@@ -439,38 +444,48 @@ footer {
 
 .card-body li {
     padding: 10px 0;
-    border-bottom: 1px solid #f9f9f9;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
 }
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+/* Service Page Specific Buttons */
+.btn-block {
+    display: block;
+    width: 100%;
     text-align: center;
-    width: 100%; /* Full width buttons */
-    box-sizing: border-box;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 5px;
     font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
 }
 
-.btn-primary {
-    background-color: #007bff;
+.btn-primary-service {
+    background-color: var(--accent);
     color: white;
 }
 
-.btn-secondary {
-    background-color: #333;
-    color: white;
+.btn-primary-service:hover {
+    background-color: var(--accent-hover);
 }
 
-.btn:hover {
-    opacity: 0.9;
+.btn-secondary-service {
+    background-color: transparent;
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-secondary-service:hover {
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 /* Contact Section */
 .contact-section {
     text-align: center;
     padding: 60px 20px;
-    background-color: #f4f4f4;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-top: 1px solid var(--border-color);
 }
