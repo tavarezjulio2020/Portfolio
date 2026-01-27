@@ -3,19 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Services for Small Business | Julio Cesar Tavarez</title>
+    <title>Web Services | Julio Cesar Tavarez</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <nav>
+    <header class="main-header">
         <div class="logo">Julio Cesar Tavarez</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Portfolio</a></li>
-            <li><a href="services.html" class="active">For Businesses</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Portfolio</a></li>
+                <li><a href="services.html" style="color: var(--accent);">For Businesses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-controls">
+            <button id="theme-toggle" class="icon-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
 
     <header class="services-hero">
         <div class="container">
@@ -41,7 +53,7 @@
                         <li>✅ Fast Loading Speed</li>
                         <li>✅ Contact Form Integration</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                    <a href="#contact" class="btn-block btn-primary-service">Get Started</a>
                 </div>
             </div>
 
@@ -54,12 +66,12 @@
                 <div class="card-body">
                     <p>For businesses that need dynamic features, databases, or online sales.</p>
                     <ul>
-                        <li>🔹 <strong>Online Ordering:</strong> Receive order notifications instantly</li>
-                        <li>🔹 <strong>Database Integration:</strong> Store and manage customer data</li>
-                        <li>🔹 <strong>Hosting & Maintenance:</strong> I handle the technical updates</li>
-                        <li>🔹 <strong>User Login/Accounts:</strong> Secure areas for your clients</li>
+                        <li>🔹 <strong>Online Ordering:</strong> Instant notifications</li>
+                        <li>🔹 <strong>Database Integration:</strong> Manage customer data</li>
+                        <li>🔹 <strong>Secure Hosting:</strong> I handle the technical updates</li>
+                        <li>🔹 <strong>User Accounts:</strong> Secure login areas</li>
                     </ul>
-                    <a href="#contact" class="btn btn-secondary">Request Quote</a>
+                    <a href="mailto:your-email@example.com" class="btn-block btn-secondary-service">Request Quote</a>
                 </div>
             </div>
 
@@ -69,7 +81,7 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Ready to grow your business?</h2>
-            <p>Send me an email with details about your project.</p>
+            <p style="color: var(--text-secondary); margin-bottom: 20px;">Send me an email with details about your project.</p>
             <a href="mailto:your-email@example.com" class="btn btn-primary">Email Me</a>
         </div>
     </section>
@@ -78,5 +90,6 @@
         <p>&copy; 2026 Julio Cesar Tavarez. All rights reserved.</p>
     </footer>
 
+    <script src="script.js"></script> 
 </body>
 </html>
