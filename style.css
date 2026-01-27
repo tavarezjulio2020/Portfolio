@@ -339,6 +339,34 @@ footer {
 
 /* Mobile Adjustment */
 @media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 100%; /* Push it right below the header */
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-primary); /* Match theme background */
+        padding: 20px 0;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        z-index: 999; /* Ensure it sits on top of everything */
+    }
+
+    /* 2. Style the "Active" state (This is what JS will toggle) */
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Space between links */
+    }
+
+    /* 3. Make sure the hamburger is visible */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        color: var(--text-primary);
+    }
+    
     .cta-container {
         flex-direction: column;
         text-align: center;
