@@ -1,3 +1,35 @@
+// 1. Select the HTML elements
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+// 2. Add the click event listener
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        // This toggles the 'active' class we defined in CSS above
+        navMenu.classList.toggle('active');
+        
+        // Optional: Toggle the icon between 'bars' and 'times' (X)
+        const icon = hamburger.querySelector('i');
+        if (navMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+}
+
+// 3. Close menu when a link is clicked (UX Improvement)
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        // Reset icon
+        const icon = hamburger.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    });
+});
 document.addEventListener('DOMContentLoaded', () => {
     
     // --- ELEMENTS ---
