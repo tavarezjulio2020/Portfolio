@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Services for Small Business | Julio Cesar Tavarez</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Julio Cesar Tavarez</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="services.html" class="active">For Businesses</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="services-hero">
+        <div class="container">
+            <h1>Web Solutions for Local Businesses</h1>
+            <p>I build fast, professional websites that help your customers find you.</p>
+        </div>
+    </header>
+
+    <section class="pricing-section">
+        <div class="container">
+            
+            <div class="pricing-card">
+                <div class="card-header">
+                    <h3>Standard Presence</h3>
+                    <div class="price">$850</div>
+                    <span class="sub-text">One-time fee</span>
+                </div>
+                <div class="card-body">
+                    <p>Perfect for businesses that need to get online quickly and look professional.</p>
+                    <ul>
+                        <li>✅ Up to 3 Static Pages (Home, About, Contact)</li>
+                        <li>✅ Mobile Responsive (Looks good on phones)</li>
+                        <li>✅ Fast Loading Speed</li>
+                        <li>✅ Contact Form Integration</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="card-header">
+                    <h3>Custom Solutions</h3>
+                    <div class="price">Custom Quote</div>
+                    <span class="sub-text">Based on complexity</span>
+                </div>
+                <div class="card-body">
+                    <p>For businesses that need dynamic features, databases, or online sales.</p>
+                    <ul>
+                        <li>🔹 <strong>Online Ordering:</strong> Receive order notifications instantly</li>
+                        <li>🔹 <strong>Database Integration:</strong> Store and manage customer data</li>
+                        <li>🔹 <strong>Hosting & Maintenance:</strong> I handle the technical updates</li>
+                        <li>🔹 <strong>User Login/Accounts:</strong> Secure areas for your clients</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary">Request Quote</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Ready to grow your business?</h2>
+            <p>Send me an email with details about your project.</p>
+            <a href="mailto:your-email@example.com" class="btn btn-primary">Email Me</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Julio Cesar Tavarez. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
