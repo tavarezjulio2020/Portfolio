@@ -567,3 +567,43 @@ footer {
     color: var(--text-primary);
     border-top: 1px solid var(--border-color);
 }
+
+/* =========================================
+   SMALL PHONE FIXES (Max Width 480px)
+   ========================================= */
+@media (max-width: 480px) {
+
+    /* 1. Fix the Crowded Header */
+    .main-header {
+        padding: 10px 15px; /* Reduce padding to save space */
+    }
+
+    .logo {
+        font-size: 1.1rem; /* Shrink logo text slightly */
+        max-width: 50%;    /* Prevent it from pushing buttons off screen */
+    }
+
+    .header-controls {
+        gap: 8px; /* Move icons closer together */
+    }
+
+    .icon-btn {
+        padding: 5px 8px; /* Make buttons slightly more compact */
+    }
+
+    /* 2. Fix the "Touching" Buttons */
+    .hero-actions {
+        display: flex;            /* Turn on Flexbox */
+        flex-direction: column;   /* Force them to stack vertically */
+        gap: 15px;                /* Add space between the buttons */
+        align-items: center;      /* Center them */
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;              /* Make buttons full width (easier to tap) */
+        max-width: 300px;         /* But don't let them get too giant */
+        margin-right: 0;          /* Remove the old side margin */
+        margin-bottom: 0;         /* Let 'gap' handle the spacing */
+    }
+}
