@@ -13,13 +13,17 @@
         <div class="logo">Julio Cesar Tavarez</div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Portfolio</a></li>
-                <li><a href="services.html" style="color: var(--accent);">For Businesses</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
+                <li><a href="services.html" style="color: var(--accent);" data-en="For Businesses" data-es="Para Negocios">For Businesses</a></li>
+                <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
             </ul>
         </nav>
         
         <div class="header-controls">
+            <button id="lang-toggle" class="icon-btn" style="font-weight: bold; font-size: 0.8rem;">
+                ES
+            </button>
+            
             <button id="theme-toggle" class="icon-btn">
                 <i class="fas fa-moon"></i>
             </button>
@@ -31,30 +35,74 @@
 
     <header class="services-hero">
         <div class="container">
-            <h1>Web Solutions for Local Businesses</h1>
-            <p>I build fast, professional websites that help your customers find you.</p>
+            <h1 data-en="High-Performance Web Solutions" data-es="Soluciones Web de Alto Rendimiento">High-Performance Web Solutions</h1>
+            <p data-en="I partner with business owners to build fast, SEO-optimized websites that turn visitors into loyal customers." 
+               data-es="Colaboro con dueños de negocios para crear sitios web rápidos y optimizados para SEO que convierten visitantes en clientes leales.">
+               I partner with business owners to build fast, SEO-optimized websites that turn visitors into loyal customers.
+            </p>
         </div>
     </header>
 
-<section class="pricing-section">
+    <section class="features-section" style="padding: 60px 0; background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;" data-en="Why Partner With Me?" data-es="¿Por Qué Trabajar Conmigo?">Why Partner With Me?</h2>
+            
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                
+                <div class="feature-card" style="padding: 20px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-primary);">
+                    <i class="fas fa-tachometer-alt" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"></i>
+                    <h3 data-en="Google Lighthouse Optimized" data-es="Optimizado para Google Lighthouse">Google Lighthouse Optimized</h3>
+                    <p data-en="I don't just build websites; I engineer them for speed. I target 100/100 Lighthouse scores in Performance and SEO." 
+                       data-es="No solo construyo sitios web; los diseño para la velocidad. Apunto a puntuaciones de 100/100 en Rendimiento y SEO.">
+                       I don't just build websites; I engineer them for speed. I target 100/100 Lighthouse scores in Performance and SEO.
+                    </p>
+                </div>
+
+                <div class="feature-card" style="padding: 20px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-primary);">
+                    <i class="fas fa-comments" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"></i>
+                    <h3 data-en="Clear & Rapid Communication" data-es="Comunicación Clara y Rápida">Clear & Rapid Communication</h3>
+                    <p data-en="Tired of developers speaking jargon? I speak business. I pride myself on quick response times and clear updates." 
+                       data-es="¿Cansado de la jerga técnica? Hablo de negocios. Me enorgullezco de mis respuestas rápidas y actualizaciones claras.">
+                       Tired of developers speaking jargon? I speak business. I pride myself on quick response times and clear updates.
+                    </p>
+                </div>
+
+                <div class="feature-card" style="padding: 20px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-primary);">
+                    <i class="fas fa-bullseye" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"></i>
+                    <h3 data-en="Your Vision, Realized" data-es="Tu Visión, Realizada">Your Vision, Realized</h3>
+                    <p data-en="I listen before I code. We work collaboratively to ensure the final design matches your specific business goals." 
+                       data-es="Escucho antes de programar. Trabajamos en colaboración para asegurar que el diseño cumpla con tus objetivos comerciales.">
+                       I listen before I code. We work collaboratively to ensure the final design matches your specific business goals.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section">
         <div class="container">
             
             <div class="pricing-card">
                 <div class="card-header">
-                    <h3>Standard Presence</h3>
+                    <h3 data-en="Standard Presence" data-es="Presencia Estándar">Standard Presence</h3>
                     <div class="price">$850</div>
-                    <span class="sub-text">One-time fee</span>
+                    <span class="sub-text" data-en="One-time fee • No hidden costs" data-es="Pago único • Sin costos ocultos">One-time fee • No hidden costs</span>
                 </div>
                 <div class="card-body">
-                    <p>Perfect for businesses that need to get online quickly and look professional.</p>
+                    <p data-en="Perfect for businesses that need to establish a professional footprint immediately." 
+                       data-es="Perfecto para negocios que necesitan establecer una huella profesional de inmediato.">
+                       Perfect for businesses that need to establish a professional footprint immediately.
+                    </p>
                     <ul>
-                        <li>✅ Up to 3 Static Pages (Home, About, Contact)</li>
-                        <li>✅ Mobile Responsive (Looks good on phones)</li>
-                        <li>✅ Fast Loading Speed</li>
-                        <li>✅ Contact Form Integration</li>
+                        <li>✅ <strong data-en="Fast & Optimized" data-es="Rápido y Optimizado">Fast & Optimized</strong></li>
+                        <li>✅ <strong data-en="Mobile Responsive" data-es="Diseño Móvil">Mobile Responsive</strong></li>
+                        <li>✅ <strong data-en="3 Core Pages" data-es="3 Páginas Principales">3 Core Pages</strong></li>
+                        <li>✅ <strong data-en="Lead Generation" data-es="Generación de Clientes">Lead Generation</strong></li>
                     </ul>
-                    <a href="mailto:tavarez.julio2020@gmail.com?subject=Website%20Business%20-%20Standard%20Package&body=Hello%20Julio%20Cesar%20Tavarez,%0A%0AI%20would%20like%20to%20build%20a%20Standard%20Website%20($850).%0A%0A---%20Please%20fill%20out%20details%20below%20---%0A%0AName:%20%0APhone%20Number:%20%0ACompany%20Name:%20%0ACompany%20Description:%20%0A%0AInformation%20you%20want%20on%20the%20site:%20%0A%0ABest%20time%20for%20a%20Zoom/Phone%20call:%20" 
-                       class="btn-block btn-primary-service">
+                    <a href="mailto:tavarez.julio2020@gmail.com?subject=Website%20Business" 
+                       class="btn-block btn-primary-service"
+                       data-en="Get Started" data-es="Comenzar Ahora">
                        Get Started
                     </a>
                 </div>
@@ -62,20 +110,24 @@
 
             <div class="pricing-card featured">
                 <div class="card-header">
-                    <h3>Custom Solutions</h3>
-                    <div class="price">Custom Quote</div>
-                    <span class="sub-text">Based on complexity</span>
+                    <h3 data-en="Custom Solutions" data-es="Soluciones Personalizadas">Custom Solutions</h3>
+                    <div class="price" data-en="Custom Quote" data-es="Cotización">Custom Quote</div>
+                    <span class="sub-text" data-en="Tailored for complex needs" data-es="A la medida para necesidades complejas">Tailored for complex needs</span>
                 </div>
                 <div class="card-body">
-                    <p>For businesses that need dynamic features, databases, or online sales.</p>
+                    <p data-en="For businesses requiring dynamic functionality, databases, or specialized tools." 
+                       data-es="Para negocios que requieren funcionalidad dinámica, bases de datos o herramientas especializadas.">
+                       For businesses requiring dynamic functionality, databases, or specialized tools.
+                    </p>
                     <ul>
-                        <li>🔹 <strong>Online Ordering:</strong> Instant notifications</li>
-                        <li>🔹 <strong>Database Integration:</strong> Manage customer data</li>
-                        <li>🔹 <strong>Secure Hosting:</strong> I handle the technical updates</li>
-                        <li>🔹 <strong>User Accounts:</strong> Secure login areas</li>
+                        <li>🔹 <strong data-en="Advanced Features" data-es="Funciones Avanzadas">Advanced Features</strong></li>
+                        <li>🔹 <strong data-en="Database Integration" data-es="Integración de Base de Datos">Database Integration</strong></li>
+                        <li>🔹 <strong data-en="User Portals" data-es="Portales de Usuario">User Portals</strong></li>
+                        <li>🔹 <strong data-en="API Connections" data-es="Conexiones API">Conexiones API</strong></li>
                     </ul>
-                    <a href="mailto:tavarez.julio2020@gmail.com?subject=Website%20Business%20-%20Custom%20Quote&body=Hello%20Julio%20Cesar%20Tavarez,%0A%0AI%20would%20like%20to%20discuss%20a%20Custom%20Website%20build.%0A%0A---%20Please%20fill%20out%20details%20below%20---%0A%0AName:%20%0APhone%20Number:%20%0ACompany%20Name:%20%0ACompany%20Description:%20%0A%0ASpecific%20features%20needed%20(databases,%20logins,%20etc):%20%0A%0ABest%20time%20for%20a%20Zoom/Phone%20call:%20" 
-                       class="btn-block btn-secondary-service">
+                    <a href="mailto:tavarez.julio2020@gmail.com?subject=Custom%20Website" 
+                       class="btn-block btn-secondary-service"
+                       data-en="Request Quote" data-es="Pedir Cotización">
                        Request Quote
                     </a>
                 </div>
@@ -84,27 +136,66 @@
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section class="tech-explain-section">
         <div class="container">
-            <h2>Ready to grow your business?</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 30px;">Call or email me to discuss your project.</p>
+            <h2 style="text-align: center; margin-bottom: 40px;" data-en="What's the difference?" data-es="¿Cuál es la diferencia?">What's the difference?</h2>
             
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <div class="tech-comparison-grid">
                 
-                <a href="tel:2082010917" class="btn btn-secondary" style="max-width: 250px; display: inline-flex; align-items: center; justify-content: center; gap: 10px;">
-                    <i class="fas fa-phone"></i> (208) 201-0917
-                </a>
+                <div class="tech-card">
+                    <div class="icon-wrapper"><i class="fas fa-file-code"></i></div>
+                    <h3 data-en="Standard Websites" data-es="Sitios Web Estándar">Standard Websites</h3>
+                    <p class="tech-subtitle" data-en='"The Digital Brochure"' data-es='"El Folleto Digital"'>"The Digital Brochure"</p>
+                    <p data-en="Standard websites are Static. They display information to your customers perfectly, but they don't 'remember' things." 
+                       data-es="Los sitios estándar son Estáticos. Muestran información a tus clientes perfectamente, pero no 'recuerdan' cosas.">
+                       Standard websites are Static. They display information to your customers perfectly, but they don't "remember" things.
+                    </p>
+                    <ul class="tech-list">
+                        <li><i class="fas fa-check"></i> <span data-en="Hosting: Low Cost" data-es="Hosting: Bajo Costo">Hosting: Low Cost</span></li>
+                        <li><i class="fas fa-check"></i> <span data-en="Maintenance: Low" data-es="Mantenimiento: Bajo">Maintenance: Low</span></li>
+                    </ul>
+                </div>
 
-                <a href="mailto:tavarez.julio2020@gmail.com?subject=Website%20Business" class="btn btn-primary" style="max-width: 250px; display: inline-flex; align-items: center; justify-content: center; gap: 10px;">
-                    <i class="fas fa-envelope"></i> Email Me
-                </a>
+                <div class="tech-card highlight">
+                    <div class="icon-wrapper"><i class="fas fa-server"></i></div>
+                    <h3 data-en="Custom Solutions" data-es="Soluciones Personalizadas">Custom Solutions</h3>
+                    <p class="tech-subtitle" data-en='"The Listening Server"' data-es='"El Servidor Que Escucha"'>"The Listening Server"</p>
+                    <p data-en="When you add a Database or User Login, the website needs a brain. It requires a dedicated server that is always 'listening' for updates." 
+                       data-es="Al agregar una Base de Datos o Login, el sitio necesita un cerebro. Requiere un servidor dedicado que siempre está 'escuchando' actualizaciones.">
+                       When you add a Database or User Login, the website needs a brain. It requires a dedicated server that is always "listening" for updates.
+                    </p>
+                    <ul class="tech-list">
+                        <li><i class="fas fa-check"></i> <span data-en="Hosting: Cloud Server" data-es="Hosting: Servidor Cloud">Hosting: Cloud Server</span></li>
+                        <li><i class="fas fa-check"></i> <span data-en="Complexity: C#/.NET Logic" data-es="Complejidad: Lógica C#/.NET">Complexity: C#/.NET Logic</span></li>
+                    </ul>
+                </div>
 
             </div>
         </div>
     </section>
 
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 data-en="Ready to grow your business?" data-es="¿Listo para crecer tu negocio?">Ready to grow your business?</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 30px;" 
+               data-en="Call or email me to discuss your project." 
+               data-es="Llámame o envíame un correo para discutir tu proyecto.">
+               Call or email me to discuss your project.
+            </p>
+            
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:2082010917" class="btn btn-secondary" style="max-width: 250px; display: inline-flex; align-items: center; justify-content: center; gap: 10px;">
+                    <i class="fas fa-phone"></i> (208) 201-0917
+                </a>
+                <a href="mailto:tavarez.julio2020@gmail.com" class="btn btn-primary" style="max-width: 250px; display: inline-flex; align-items: center; justify-content: center; gap: 10px;">
+                    <i class="fas fa-envelope"></i> <span data-en="Email Me" data-es="Envíame un Correo">Email Me</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2026 Julio Cesar Tavarez. All rights reserved.</p>
+        <p>&copy; 2026 Julio Cesar Tavarez. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></p>
     </footer>
 
     <script src="script.js"></script> 
