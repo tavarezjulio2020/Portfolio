@@ -133,61 +133,90 @@ section {
     padding: 80px 5%;
 }
 
-/* HERO */
+/* =========================================
+   HERO & VIDEO SECTION (Glass Box Update)
+   ========================================= */
 .hero-section {
     position: relative;
-    overflow: hidden;   /* Cuts off any video parts that stick out */
-    background: transparent; /* Removes the old gradient */
+    overflow: hidden;
+    background: transparent;
     z-index: 1;
+    min-height: 90vh;      /* Full height */
+    display: flex;         /* Layout mode */
+    align-items: center;   /* Center vertically */
+    justify-content: space-between; /* Push text Left, Image Right */
+    gap: 80px;             /* Big gap so they don't touch */
+    padding: 0 10%;        /* Side padding */
 }
 
-/* 1. The Container that holds the video */
 .video-background {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Pushes it BEHIND everything else */
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
 }
 
-/* 2. The Video itself */
 .video-background video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures video fills the screen without stretching */
+    width: 100%; height: 100%; object-fit: cover;
 }
 
-/* 3. The Dark Overlay (Crucial for text readability) */
+/* Reduced opacity so video is visible but glass box still pops */
 .video-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Black layer with 70% opacity */
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
     z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; 
+    flex: 1;
+    max-width: 650px;
+}
+
+/* --- THE GLASS BOX --- */
+.hero-text-box {
+    background: rgba(30, 30, 30, 0.75); /* Dark semi-transparent */
+    backdrop-filter: blur(15px);        /* Blur effect */
+    -webkit-backdrop-filter: blur(15px); 
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Light Mode Override for Box */
+body.light-mode .hero-text-box {
+     background: rgba(255, 255, 255, 0.85);
+     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
     line-height: 1.1;
+    /* Uses theme color now, readable against the box background */
 }
 
 .hero-content p {
     font-size: 1.2rem;
     color: var(--text-secondary);
     margin-bottom: 30px;
-    max-width: 600px;
 }
 
-/* Ensure your text and profile pic sit ON TOP of the overlay */
-.hero-content, 
 .hero-image-container {
     position: relative;
-    z-index: 2; 
+    z-index: 2;
 }
+
+.hero-image-container img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0px var(--accent);
+}
+
 .btn {
     padding: 12px 25px;
     border-radius: 5px;
@@ -213,14 +242,6 @@ section {
 .secondary-btn:hover {
     background-color: var(--text-primary);
     color: var(--bg-primary);
-}
-
-.hero-image-container img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 20px 20px 0px var(--accent);
 }
 
 /* ABOUT & STATS */
@@ -314,6 +335,11 @@ section {
     padding: 20px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
+    text-decoration: none; /* remove underline from link */
+}
+
+.award-card:hover {
+    border-color: var(--accent);
 }
 
 .award-icon {
@@ -332,7 +358,7 @@ footer {
 
 .freelance-cta {
     padding: 60px 5%;
-    background-color: var(--bg-card); /* Distinct from the main background */
+    background-color: var(--bg-card);
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     margin: 40px 0;
@@ -344,7 +370,7 @@ footer {
     justify-content: space-between;
     max-width: 1000px;
     margin: 0 auto;
-    flex-wrap: wrap; /* Wraps on mobile */
+    flex-wrap: wrap; 
     gap: 30px;
 }
 
@@ -370,30 +396,30 @@ footer {
     min-width: 200px;
 }
 
-/* Mobile Adjustment */
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
 @media (max-width: 768px) {
     .nav-menu {
-        display: none; /* Hidden by default */
+        display: none; 
         position: absolute;
-        top: 100%; /* Push it right below the header */
+        top: 100%; 
         left: 0;
         width: 100%;
-        background-color: var(--bg-primary); /* Match theme background */
+        background-color: var(--bg-primary);
         padding: 20px 0;
         border-bottom: 1px solid var(--border-color);
         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        z-index: 999; /* Ensure it sits on top of everything */
+        z-index: 999;
     }
 
-    /* 2. Style the "Active" state (This is what JS will toggle) */
     .nav-menu.active {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px; /* Space between links */
+        gap: 20px; 
     }
 
-    /* 3. Make sure the hamburger is visible */
     .hamburger {
         display: block;
         cursor: pointer;
@@ -409,49 +435,35 @@ footer {
         text-align: center;
         width: 100%;
     }
-    .nav-menu {
-        display: none; 
-    }
-    
+
     .hero-section {
         flex-direction: column-reverse; /* Puts image on top, text on bottom */
         text-align: center;
         justify-content: center;
         padding-top: 100px;
-    }
-    
-/* ADD THIS NEW RULE */
-    .hero-content {
-        position: relative;
-        z-index: 10; /* Forces text to sit ON TOP of the image shadow */
+        gap: 40px; /* Reduced gap for mobile */
     }
 
-.hero-image-container img {
-        /* Make the image take up more screen width */
+    /* Adjust Glass Box for Mobile */
+    .hero-text-box {
+        padding: 25px;
+    }
+
+    .hero-image-container img {
         width: 85%; 
-        max-width: 380px; /* Allow it to get bigger than 250px */
-        
-        /* Reduce the gap slightly so it feels connected to the text */
-        margin-bottom: 40px; 
-        
-        /* Scale down the shadow slightly for mobile so it's not too chunky */
+        max-width: 300px; 
+        margin-bottom: 0;
         box-shadow: 12px 12px 0px var(--accent);
-        
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
     
-.hero-content h1 {
-        /* Reduce text size slightly so "Julio Tavarez" fits on one line */
-        font-size: 2.8rem; 
+    .hero-content h1 {
+        font-size: 2.5rem; 
         line-height: 1.1;
     }
     
-    .hero-content p {
-        padding: 0 15px; /* Adds breathing room for the paragraph text */
-    }
-
     .header-controls {
         margin-left: auto;
         margin-right: 15px;
@@ -460,183 +472,43 @@ footer {
     .cta-button {
         display: none;
     }
-
-    .hamburger {
-        display: block;
-        color: var(--text-primary);
-    }
 }
 
-/* --- Services Page Specific Styles (Theme Aware) --- */
-
-.services-hero {
-    background-color: var(--bg-secondary);
-    text-align: center;
-    padding: 80px 20px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.services-hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: var(--text-primary);
-}
-
-.services-hero p {
-    color: var(--text-secondary);
-}
-
-.pricing-section {
-    padding: 60px 20px;
-    background-color: var(--bg-primary);
-}
-
-.pricing-section .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-/* Pricing Cards */
-.pricing-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 30px;
-    flex: 1;
-    min-width: 300px;
-    box-shadow: var(--shadow);
-    transition: transform 0.2s ease;
-    color: var(--text-primary);
-}
-
-.pricing-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Highlight the Custom card */
-.pricing-card.featured {
-    border-top: 5px solid var(--accent); /* Only color the top */
-    /* REMOVED: border-color: var(--accent); <-- This was causing the "purple box" look */
-}
-
-.card-header {
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
-
-.card-header h3 {
-    margin: 0;
-    color: var(--text-primary);
-}
-
-.price {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--accent); /* Uses your theme accent color */
-    margin: 10px 0;
-}
-
-.sub-text {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-}
-
-.card-body ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
-
-.card-body li {
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border-color);
-    color: var(--text-primary);
-}
-
-/* Service Page Specific Buttons */
-.btn-block {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 12px;
-    margin-top: 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-.btn-primary-service {
-    background-color: var(--accent);
-    color: white;
-}
-
-.btn-primary-service:hover {
-    background-color: var(--accent-hover);
-}
-
-.btn-secondary-service {
-    background-color: transparent;
-    border: 2px solid var(--border-color);
-    color: var(--text-primary);
-}
-
-.btn-secondary-service:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-}
-
-/* Contact Section */
-.contact-section {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
-    border-top: 1px solid var(--border-color);
-}
-
-/* =========================================
-   SMALL PHONE FIXES (Max Width 480px)
-   ========================================= */
+/* Extra small devices */
 @media (max-width: 480px) {
-
-    /* 1. Fix the Crowded Header */
     .main-header {
-        padding: 10px 15px; /* Reduce padding to save space */
+        padding: 10px 15px; 
     }
 
     .logo {
-        font-size: 1.1rem; /* Shrink logo text slightly */
-        max-width: 50%;    /* Prevent it from pushing buttons off screen */
+        font-size: 1.1rem; 
+        max-width: 50%;    
     }
 
     .header-controls {
-        gap: 8px; /* Move icons closer together */
+        gap: 8px; 
     }
 
     .icon-btn {
-        padding: 5px 8px; /* Make buttons slightly more compact */
+        padding: 5px 8px; 
+    }
+    
+    .hero-content {
+        padding: 0 15px;
     }
 
-    /* 2. Fix the "Touching" Buttons */
     .hero-actions {
-        display: flex;            /* Turn on Flexbox */
-        flex-direction: column;   /* Force them to stack vertically */
-        gap: 15px;                /* Add space between the buttons */
-        align-items: center;      /* Center them */
+        display: flex;           
+        flex-direction: column;   
+        gap: 15px;                
+        align-items: center;      
         width: 100%;
     }
 
     .hero-actions .btn {
-        width: 100%;              /* Make buttons full width (easier to tap) */
-        max-width: 300px;         /* But don't let them get too giant */
-        margin-right: 0;          /* Remove the old side margin */
-        margin-bottom: 0;         /* Let 'gap' handle the spacing */
+        width: 100%;              
+        max-width: 300px;         
+        margin-right: 0;          
+        margin-bottom: 0;         
     }
 }
